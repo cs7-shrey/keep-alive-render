@@ -22,7 +22,7 @@ async def keep_running():
 
 @app.get('/')
 async def read_root():
-    return {'hello', 'world'}
+    return {'hello': 'world'}
 
 @app.get('/trigger')
 async def run_trigger():
