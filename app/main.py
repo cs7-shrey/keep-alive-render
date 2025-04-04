@@ -29,3 +29,7 @@ async def run_trigger():
     coro = keep_running()
     asyncio.create_task(coro)
     return {'message': 'trigger successful'}
+
+@app.get('/health')
+async def health_check():
+    return {'status': 'ok'}
